@@ -1,0 +1,61 @@
+@charset 'utf-8';
+@import "reset";
+
+#header {
+  height: 80px;
+  width: 100%;
+  background-color: gray;
+  position: sticky;
+  top: 0;
+}
+
+#main {
+  .slider {
+    width: 100%;
+    position: relative;
+    z-index: 1;
+    &__item {
+      display: block;
+      width: 100%;
+      img {
+        width: 100%;
+        object-fit: cover;
+      }
+    }
+  }
+
+  .slick-prev ,
+  .slick-next {
+    display: block;
+    height: 48px;
+    width: 48px;
+    border-radius: 50%;
+    background-size: cover;
+    cursor: pointer;
+    padding: 0;
+    line-height: 0px;
+    font-size: 0px;
+    border: none;
+    outline: none;
+    -webkit-transform: translate(0, -50%);
+    -ms-transform: translate(0, -50%);
+    transform: translate(0, -50%);
+    transition: 0.15s;
+    position: absolute;
+    top: 50%;
+    z-index: 2;
+    &:hover {
+      -webkit-transform: scale(1.15) translate(0, -45%);
+      -ms-transform: scale(1.15) translate(0, -45%);
+      transform: scale(1.15) translate(0, -45%);
+    }
+  }
+  .slick-prev {
+    left: 40px;
+    background-image: url('../img/矢印ボタン左3.svg');
+  }
+  .slick-next {
+    right: 40px;
+    background-image: url('../img/矢印ボタン右3.svg');
+  }
+}
